@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Tofi_app"
 include(":app")
+include(":data")
+include(":domain")
