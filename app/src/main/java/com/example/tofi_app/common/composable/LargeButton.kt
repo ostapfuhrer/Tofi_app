@@ -1,8 +1,8 @@
 package com.example.tofi_app.common.composable
 
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults.buttonColors
@@ -14,7 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun MainButton(
+fun LargeButton(
     text: String,
     textColor: Color,
     backgroundColor: Color,
@@ -25,7 +25,7 @@ fun MainButton(
         onClick = onClick,
         modifier = modifier
             .fillMaxWidth()
-            .wrapContentHeight(),
+            .height(74.dp),
         shape = RoundedCornerShape(8.dp),
         colors = buttonColors(backgroundColor),
         elevation = buttonElevation(4.dp)

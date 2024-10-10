@@ -1,4 +1,4 @@
-package com.example.tofi_app.splash.screen
+package com.example.tofi_app.splash_screen.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -18,7 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.tofi_app.R
-import com.example.tofi_app.splash.viewmodel.SplashViewModel
+import com.example.tofi_app.splash_screen.viewmodel.SplashViewModel
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 @Composable

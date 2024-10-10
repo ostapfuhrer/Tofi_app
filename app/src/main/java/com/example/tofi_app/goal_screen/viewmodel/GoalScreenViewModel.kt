@@ -1,11 +1,11 @@
-package com.example.tofi_app.intro.viewmodel
+package com.example.tofi_app.goal_screen.viewmodel
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class IntroViewModel @Inject constructor(
+class GoalScreenViewModel @Inject constructor(
 
 ) : ViewModel() {
 

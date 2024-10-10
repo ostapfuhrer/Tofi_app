@@ -1,4 +1,4 @@
-package com.example.tofi_app.splash.utils
+package com.example.tofi_app.splash_screen.utils
 
 import com.example.tofi_app.R
 

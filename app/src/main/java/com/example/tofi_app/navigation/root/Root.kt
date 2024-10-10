@@ -13,7 +13,7 @@ import com.example.tofi_app.navigation.getNavController
 import com.example.tofi_app.navigation.navigator.NavigationIntent
 import com.example.tofi_app.navigation.viewmodel.NavigationViewModel
 import com.example.tofi_app.navigation.viewmodel.ToastViewModel
-import com.example.tofi_app.splash.navigation.splashScreen
+import com.example.tofi_app.splash_screen.navigation.splashScreen
 import kotlinx.coroutines.flow.SharedFlow
 
 @Composable
