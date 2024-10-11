@@ -1,12 +1,9 @@
 package com.example.tofi_app.goal_screen.screen
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
@@ -35,17 +32,12 @@ fun GoalScreenUi() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color.White)
+            .background(color = Color.White),
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(8.dp),
-            horizontalArrangement = Arrangement.Center
-        ) {
-            val indicators = listOf(true, false, false, false, false, false, false)
-            IndicatorRow(indicators = indicators)
-        }
+        val indicators = listOf(true, false, false, false, false, false, false)
+        IndicatorRow(indicators = indicators)
+
         Spacer(modifier = Modifier.height(120.dp))
         IntroScreenHeader(
             iconId = R.drawable.ic_goal,
@@ -63,7 +55,6 @@ fun GoalScreenUi() {
                 backgroundColor = AppColors.YellowDefault,
                 onClick = { /*TODO*/ },
                 modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
                     .padding(start = 4.dp, end = 4.dp, bottom = 8.dp)
             )
         }
