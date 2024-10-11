@@ -2,7 +2,6 @@ package com.example.tofi_app.goal_screen.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -11,7 +10,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -26,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.tofi_app.R
+import com.example.tofi_app.common.composable.IndicatorRow
 import com.example.tofi_app.common.composable.LargeButton
 import com.example.tofi_app.goal_screen.viewmodel.GoalScreenViewModel
 import com.example.tofi_app.ui.theme.AppColors
@@ -51,9 +50,7 @@ fun GoalScreenUi() {
             horizontalArrangement = Arrangement.Center
         ) {
             val indicators = listOf(true, false, false, false, false, false, false)
-            indicators.forEach { isActive ->
-                IndicatorDot(isActive = isActive, modifier = Modifier.padding(end = 4.dp))
-            }
+            IndicatorRow(indicators = indicators)
         }
         Spacer(modifier = Modifier.height(120.dp))
         Icon(
@@ -95,18 +92,6 @@ fun GoalScreenUi() {
             )
         }
     }
-}
-
-@Composable
-fun IndicatorDot(isActive: Boolean, modifier: Modifier) {
-    Box(
-        modifier = modifier
-            .size(40.dp, 8.dp)
-            .background(
-                if (isActive) AppColors.YellowDark else AppColors.YellowLight,
-                shape = CircleShape
-            )
-    )
 }
 
 @Preview
