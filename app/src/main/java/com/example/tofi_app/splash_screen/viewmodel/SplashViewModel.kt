@@ -1,7 +1,7 @@
-package com.example.tofi_app.splash.viewmodel
+package com.example.tofi_app.splash_screen.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.example.tofi_app.splash.navigation.SplashNavigationActions
+import com.example.tofi_app.splash_screen.navigation.SplashNavigationActions
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

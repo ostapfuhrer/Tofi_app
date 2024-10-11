@@ -1,4 +1,4 @@
-package com.example.tofi_app.intro.screen
+package com.example.tofi_app.intro_screen.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.tofi_app.R
 import com.example.tofi_app.common.composable.MainButton
-import com.example.tofi_app.intro.viewmodel.IntroViewModel
+import com.example.tofi_app.intro_screen.viewmodel.IntroViewModel
 import com.example.tofi_app.ui.theme.AppColors
 
 @Composable
@@ -65,7 +65,7 @@ fun IntroScreenUi() {
             backgroundColor = AppColors.YellowDefault,
             modifier = Modifier
                 .align(Alignment.BottomCenter)
-                .padding(bottom = 36.dp)
+                .padding(bottom = 36.dp, start = 8.dp, end = 8.dp)
         )
         Row(
             modifier = Modifier
