@@ -34,13 +34,13 @@ fun IntroScreenHeader(
             text = title,
             style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold),
             fontSize = 24.sp,
-            modifier = Modifier.padding(top = 8.dp)
+            modifier = Modifier.padding(top = 4.dp)
         )
         Text(
             text = description,
             style = MaterialTheme.typography.bodySmall,
             fontSize = 14.sp,
-            modifier = Modifier.padding(bottom = 16.dp, top = 8.dp)
+            modifier = Modifier
         )
     }
 }

@@ -1,7 +1,6 @@
 package com.example.tofi_app.common.composable
 
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -11,11 +10,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 
 @Composable
 fun MainButton(
     text: String,
+    fontSize: TextUnit,
+    fontWeight: FontWeight,
     textColor: Color,
     backgroundColor: Color,
     onClick: () -> Unit,
@@ -30,6 +33,6 @@ fun MainButton(
         colors = buttonColors(backgroundColor),
         elevation = buttonElevation(4.dp)
     ) {
-        Text(text = text, color = textColor)
+        Text(text = text, color = textColor, fontSize = fontSize, fontWeight = fontWeight)
     }
 }

@@ -20,6 +20,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.tofi_app.R
 import com.example.tofi_app.common.composable.MainButton
@@ -60,6 +61,8 @@ fun IntroScreenUi() {
         )
         MainButton(
             text = "Start Now",
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Bold,
             onClick = { /*TODO*/ },
             textColor = Color.White,
             backgroundColor = AppColors.YellowDefault,
