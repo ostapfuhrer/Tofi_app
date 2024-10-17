@@ -18,12 +18,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.tofi_app.R
-import com.example.tofi_app.splash_screen.viewmodel.SplashViewModel
+import com.example.tofi_app.splash_screen.viewmodel.SplashScreenViewModel
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 @Composable
 fun SplashScreen(
-    viewModel: SplashViewModel = hiltViewModel()
+    viewModel: SplashScreenViewModel = hiltViewModel()
 ) {
     SettingStatusBarColor()
     SplashScreenUI()

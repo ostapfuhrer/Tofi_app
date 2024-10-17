@@ -72,7 +72,7 @@ fun AboutUserScreenUi() {
             textColor = Color.White,
             backgroundColor = AppColors.YellowDefault,
             onClick = { /*TODO*/ },
-            modifier = Modifier.padding(start = 8.dp, end = 8.dp, top = 34.dp, bottom = 8.dp)
+            modifier = Modifier.padding(start = 8.dp, end = 8.dp, top = 14.dp, bottom = 8.dp)
         )
     }
 }
