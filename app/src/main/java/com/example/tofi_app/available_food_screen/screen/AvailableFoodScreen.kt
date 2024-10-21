@@ -1,4 +1,4 @@
-package com.example.tofi_app.activity_level_screen.screen
+package com.example.tofi_app.available_food_screen.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -19,12 +19,12 @@ import com.example.tofi_app.common.composable.LargeButton
 import com.example.tofi_app.ui.theme.AppColors
 
 @Composable
-fun ActivityLevelScreen() {
-    ActivityLevelScreenUI()
+fun AvailableFoodScreen() {
+    AvailableFoodScreenUI()
 }
 
 @Composable
-fun ActivityLevelScreenUI() {
+fun AvailableFoodScreenUI() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -37,34 +37,16 @@ fun ActivityLevelScreenUI() {
         Spacer(modifier = Modifier.height(120.dp))
         IntroScreenHeader(
             iconId = R.drawable.ic_activity_level,
-            title = "Whats your activity level?",
-            description = ""
+            title = "Choose the products available to you ",
+            description = "a ration will be created based on them"
         )
         Spacer(modifier = Modifier.weight(1f))
 
-        val buttonLabels = listOf(
-            "sedentary lifestyle",
-            "light activity",
-            "moderately active",
-            "very active",
-            "professional athlete"
-        )
-
-        buttonLabels.forEach { label ->
-            LargeButton(
-                text = label,
-                textColor = Color.White,
-                backgroundColor = AppColors.YellowDefault,
-                onClick = { /*TODO*/ },
-                modifier = Modifier
-                    .padding(start = 4.dp, end = 4.dp, bottom = 8.dp)
-            )
-        }
     }
 }
 
 @Preview
 @Composable
-fun PreviewActivityLevelScreenUI() {
-    ActivityLevelScreenUI()
+fun PreviewAvailableFoodScreenUI() {
+    AvailableFoodScreenUI()
 }

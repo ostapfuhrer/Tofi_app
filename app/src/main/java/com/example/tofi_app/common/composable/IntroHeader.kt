@@ -19,7 +19,7 @@ import androidx.compose.ui.unit.sp
 fun IntroScreenHeader(
     iconId: Int,
     title: String,
-    description: String
+    description: String,
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -34,13 +34,13 @@ fun IntroScreenHeader(
             text = title,
             style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold),
             fontSize = 24.sp,
-            modifier = Modifier.padding(top = 4.dp)
+            modifier = Modifier.padding(start = 12.dp, end = 12.dp)
         )
         Text(
             text = description,
             style = MaterialTheme.typography.bodySmall,
             fontSize = 14.sp,
-            modifier = Modifier
+            modifier = Modifier.padding(start = 12.dp, end = 12.dp)
         )
     }
 }
