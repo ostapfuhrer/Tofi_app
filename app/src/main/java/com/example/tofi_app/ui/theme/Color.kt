@@ -13,4 +13,5 @@ object AppColors {
     val YellowDefault = Color(0xFFE5B713)
     val YellowDark = Color(0xFFAF9330)
     val YellowLight = Color(0xFFFFC702)
+    val GrayLight = Color(0xFFECECEC)
 }
