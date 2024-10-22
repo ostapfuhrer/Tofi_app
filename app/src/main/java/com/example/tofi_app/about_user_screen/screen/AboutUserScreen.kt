@@ -40,9 +40,9 @@ fun AboutUserScreenUi() {
     ) {
         val indicators = listOf(true, false, false, false, false, false, false)
         IndicatorRow(indicators = indicators)
-
-        Spacer(modifier = Modifier.height(120.dp))
+        
         IntroScreenHeader(
+            modifier = Modifier.padding(top = 120.dp),
             iconId = R.drawable.ic_about,
             title = "About you",
             description = "calculate the calories for your goal"

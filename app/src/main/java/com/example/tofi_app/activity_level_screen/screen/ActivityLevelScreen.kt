@@ -36,6 +36,7 @@ fun ActivityLevelScreenUI() {
 
         Spacer(modifier = Modifier.height(120.dp))
         IntroScreenHeader(
+            modifier = Modifier,
             iconId = R.drawable.ic_activity_level,
             title = "Whats your activity level?",
             description = ""
