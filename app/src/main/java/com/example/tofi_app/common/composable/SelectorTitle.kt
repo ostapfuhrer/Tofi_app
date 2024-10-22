@@ -10,61 +10,77 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.tofi_app.common.model.TextStyleData
 
 @Composable
 fun SelectorTitle(
+    modifier: Modifier,
     textTitle: String,
-    textSelectCounter:String,
-    textSelectAll:String,
-    fontSize: TextUnit,
-    fontWeight: FontWeight,
-    textColor: Color,
+    textTitleStyle: TextStyleData,
+
+    textSelectCounter: String,
+    textSelectCounterStyle: TextStyleData,
+
+    textSelectAll: String,
+    textSelectAllStyle: TextStyleData,
 ) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(start = 8.dp, end = 8.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Column(horizontalAlignment = Alignment.Start) {
-            Text(
-                modifier = Modifier,
-                text = textTitle,
-                color = textColor,
-                fontSize = fontSize,
-                fontWeight = fontWeight
-            )
-            Text(
-                text = textSelectCounter,
-                color = textColor,
-                fontSize = fontSize,
-                fontWeight = fontWeight
-            )
+            StyledText(text = textTitle, styleData = textTitleStyle)
+            StyledText(text = textSelectCounter, styleData = textSelectCounterStyle)
         }
-        Text(
-            text = textSelectAll,
-            color = textColor,
-            fontSize = fontSize,
-            fontWeight = fontWeight
-        )
+        StyledText(text = textSelectAll, styleData = textSelectAllStyle)
     }
+}
+
+@Composable
+fun StyledText(
+    text: String,
+    styleData: TextStyleData
+) {
+    Text(
+        text = text,
+        style = TextStyle(
+            color = styleData.textColor,
+            fontSize = styleData.fontSize,
+            fontWeight = styleData.fontWeight
+        )
+    )
 }
 
 @Preview
 @Composable
 fun SelectorTitlePreview() {
     SelectorTitle(
+        modifier = Modifier.padding(top = 48.dp),
         textTitle = "Proteins",
+        textTitleStyle = TextStyleData(
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Normal,
+            textColor = Color.Black
+        ),
         textSelectCounter = "select at least 2",
-        textSelectAll = "select all",
-        fontSize = 12.sp,
-        fontWeight = FontWeight.Bold,
-        textColor = Color.Black,
+        textSelectCounterStyle = TextStyleData(
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Light,
+            textColor = Color.Gray
+        ),
+        textSelectAll = "Select All",
+        textSelectAllStyle = TextStyleData(
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Normal,
+            textColor = Color.Black
+        )
     )
 }

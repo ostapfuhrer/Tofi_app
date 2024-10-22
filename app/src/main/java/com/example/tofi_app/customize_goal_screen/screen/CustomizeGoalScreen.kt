@@ -1,4 +1,4 @@
-package com.example.tofi_app.about_user_screen.screen
+package com.example.tofi_app.customize_goal_screen.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -13,9 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.tofi_app.R
-import com.example.tofi_app.about_user_screen.viewmodel.AboutUserScreenViewModel
 import com.example.tofi_app.common.composable.IndicatorRow
 import com.example.tofi_app.common.composable.IntroScreenHeader
 import com.example.tofi_app.common.composable.MainButton
@@ -23,14 +21,14 @@ import com.example.tofi_app.common.composable.SmallButton
 import com.example.tofi_app.ui.theme.AppColors
 
 @Composable
-fun AboutUserScreen(
-    aboutUserScreenViewModel: AboutUserScreenViewModel = hiltViewModel()
+fun CustomizeGoalScreen(
+
 ) {
-    AboutUserScreenUi()
+    CustomizeGoalScreenUI()
 }
 
 @Composable
-fun AboutUserScreenUi() {
+fun CustomizeGoalScreenUI() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -42,13 +40,13 @@ fun AboutUserScreenUi() {
 
         IntroScreenHeader(
             modifier = Modifier.padding(top = 120.dp),
-            iconId = R.drawable.ic_about,
-            title = "About you",
-            description = "calculate the calories for your goal"
+            iconId = R.drawable.ic_customize_goal,
+            title = "Customize your goal",
+            description = "this is the last step"
         )
         Spacer(modifier = Modifier.weight(0.1f))
 
-        val buttonLabels = listOf("Sex", "Age", "Height", "Weight")
+        val buttonLabels = listOf("Current weight", "Goal weight", "Speed result")
 
         buttonLabels.forEach { label ->
             SmallButton(
@@ -78,6 +76,6 @@ fun AboutUserScreenUi() {
 
 @Preview
 @Composable
-fun AboutUserScreenPreview() {
-    AboutUserScreenUi()
+fun CustomizeGoalScreenUIPreview() {
+    CustomizeGoalScreenUI()
 }
