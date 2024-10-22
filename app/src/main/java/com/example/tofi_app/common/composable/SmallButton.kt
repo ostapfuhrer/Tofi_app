@@ -42,7 +42,7 @@ fun SmallButton(
         modifier = modifier
             .fillMaxWidth()
             .wrapContentHeight(),
-        shape = RoundedCornerShape(4.dp),
+        shape = RoundedCornerShape(8.dp),
         colors = buttonColors(backgroundColor),
         elevation = buttonElevation(4.dp),
         contentPadding = PaddingValues(0.dp)
