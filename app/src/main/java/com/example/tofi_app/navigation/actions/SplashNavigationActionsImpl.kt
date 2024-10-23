@@ -2,7 +2,7 @@ package com.example.tofi_app.navigation.actions
 
 import com.example.tofi_app.navigation.destination.Destination
 import com.example.tofi_app.navigation.navigator.AppNavigator
-import com.example.tofi_app.splash_screen.navigation.SplashNavigationActions
+import com.example.tofi_app.splash.navigation.SplashNavigationActions
 import javax.inject.Inject
 
 class SplashNavigationActionsImpl @Inject constructor(

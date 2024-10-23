@@ -22,6 +22,7 @@ fun IntroScreenHeader(
     iconId: Int,
     title: String,
     description: String,
+    fontWeight: FontWeight,
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -34,7 +35,7 @@ fun IntroScreenHeader(
         )
         Text(
             text = title,
-            fontWeight = FontWeight.Bold,
+            fontWeight = fontWeight,
             fontSize = 24.sp,
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(start = 12.dp, end = 12.dp)
