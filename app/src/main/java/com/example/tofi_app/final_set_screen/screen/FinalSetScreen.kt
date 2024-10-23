@@ -47,7 +47,7 @@ fun FinalSetScreenUI() {
     val circleSize = 80.dp
     val circleBorderWidth = 8.dp
     val spacerHeight = 16.dp
-    val indicators = listOf(true, false, false, false, false, false, false)
+    val indicators = listOf(false, false, false, false, false, false, true)
 
     Column(
         modifier = Modifier
