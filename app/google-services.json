@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "715579669434",
+    "project_id": "tofi-2e911",
+    "storage_bucket": "tofi-2e911.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715579669434:android:596d98dac912473f7cfb83",
+        "android_client_info": {
+          "package_name": "com.example.tofi_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH5i24AKWz1qex8jnULAKFToNPqSs7mEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

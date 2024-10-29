@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.dagger.hilt.android")
     id("kotlin-kapt")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -126,6 +127,14 @@ dependencies {
 
     //accompanist_systemuicontroller
     implementation(libs.accompanist.systemuicontroller)
+
+    //Firebase
+    //BoM
+    implementation(platform(libs.firebase.bom))
+
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation(libs.firebase.analytics)
+
 }
 
 // Allow references to generated code
