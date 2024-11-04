@@ -132,8 +132,11 @@ dependencies {
     //BoM
     implementation(platform(libs.firebase.bom))
 
-    // When using the BoM, don't specify versions in Firebase dependencies
+    //analytics
     implementation(libs.firebase.analytics)
+
+    //Auth
+    implementation(libs.firebase.auth)
 
 }
 
