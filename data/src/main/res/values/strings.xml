@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--FIREBASE MESSAGES-->
+    <string name="user_with_this_email_already_exists">User with this email already exists</string>
+    <string name="no_internet_connection">Check your internet connection and try again</string>
+    <string name="unknown_error_has_occurred">An unknown error has occurred</string>
+    <string name="registration_success">You have successfully registered</string>
+    <string name="invalid_login_credentials">Entered email or password are incorrect. Please try again</string>
+    <string name="invalid_login_password">Provided password is incorrect. Please try again</string>
+    <string name="reset_password_message">Please check your email and follow the instructions</string>
+    <string name="user_is_not_exists_message">The user with this email is not registered</string>
+    <string name="try_later">There was an error on the server. Try again later.</string>
+    <string name="change_password_success">Password change was successful</string>
+    <string name="delete_account_success">The account was successfully deleted</string>
+
+    <!--REGISTRATION-->
+    <string name="registration_title">Sign up</string>
+    <string name="registration_paragraph">Create a new account to use premium features</string>
+    <string name="sign_up">Sign up</string>
+    <string name="registration_hypertext">Already have an account?</string>
+    <string name="registration_hyperlink">Sign in</string>
+</resources>
