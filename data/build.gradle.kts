@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.data"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 28
@@ -41,14 +41,19 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
 
     //Retrofit
-    implementation (libs.retrofit)
+    implementation(libs.retrofit)
     //Gson converters
-    implementation (libs.converter.gson)
+    implementation(libs.converter.gson)
 
-    //Room
+    //room
     implementation(libs.androidx.room.runtime)
+
+    //firebase
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.database.ktx)
+
     annotationProcessor(libs.androidx.room.compiler)
-    // optional - Kotlin Extensions and Coroutines support for Room
+    // optional - Kotlin Extensions and Coroutines support for room
     implementation(libs.androidx.room.ktx)
 
     //Data store
@@ -60,7 +65,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 }
+
 kapt {
     correctErrorTypes = true
 }

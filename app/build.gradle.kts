@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "com.example.tofi_app"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.tofi_app"
         minSdk = 28
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -132,8 +132,11 @@ dependencies {
     //BoM
     implementation(platform(libs.firebase.bom))
 
-    // When using the BoM, don't specify versions in Firebase dependencies
+    //analytics
     implementation(libs.firebase.analytics)
+
+    //Auth
+    implementation(libs.firebase.auth)
 
 }
 
