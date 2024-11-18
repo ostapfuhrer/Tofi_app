@@ -21,5 +21,21 @@ dependencyResolutionManagement {
 
 rootProject.name = "Tofi_app"
 include(":app")
-include(":data")
-include(":domain")
+include(":core:common")
+include(":core:data")
+include(":core:database")
+include(":core:datastore")
+include(":core:domain")
+include(":core:model")
+include(":core:network")
+include(":core:notifications")
+
+
+
+
+
+
+
+include(":feature:onboarding")
+
+
