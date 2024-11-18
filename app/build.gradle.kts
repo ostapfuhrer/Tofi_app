@@ -54,31 +54,14 @@ android {
 
 dependencies {
 
-    //dependencies from modules
-    implementation(project(":data"))
-    implementation(project(":domain"))
+    //dependencies core
+    implementation(project(":core:common"))
+    implementation(project(":core:data"))
+    implementation(project(":core:model"))
 
-    // Android Studio Preview support
-    implementation(libs.ui.tooling.preview)
-    debugImplementation(libs.ui.tooling)
 
-    //Integration with activities
-    implementation(libs.androidx.activity.compose.v190)
-    //Integration with ViewModels
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-    //Integration with LiveData
-    implementation(libs.androidx.runtime.livedata)
-    // Lifecycle utilities for Compose
-    implementation(libs.androidx.lifecycle.runtime.compose)
-
-    // ViewModel
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-
-    // Saved state module for ViewModel
-    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
-
-    // LiveData
-    implementation(libs.androidx.lifecycle.livedata.ktx)
+    //dependencies feature
+    implementation(project(":feature:onboarding"))
 
     // Jetpack Compose integration
     implementation(libs.androidx.navigation.compose)
@@ -113,6 +96,8 @@ dependencies {
     //compose
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
+
+
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
@@ -124,20 +109,6 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-    //accompanist_systemuicontroller
-    implementation(libs.accompanist.systemuicontroller)
-
-    //Firebase
-    //BoM
-    implementation(platform(libs.firebase.bom))
-
-    //analytics
-    implementation(libs.firebase.analytics)
-
-    //Auth
-    implementation(libs.firebase.auth)
-
 }
 
 // Allow references to generated code
