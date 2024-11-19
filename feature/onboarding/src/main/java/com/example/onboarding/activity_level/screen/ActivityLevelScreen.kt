@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.onboarding.R
@@ -38,7 +39,8 @@ fun ActivityLevelScreenUI() {
             modifier = Modifier,
             iconId = R.drawable.ic_activity_level,
             title = "Whats your activity level?",
-            description = ""
+            description = "",
+            fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.weight(1f))
 

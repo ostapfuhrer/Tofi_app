@@ -43,7 +43,8 @@ fun AboutUserScreenUi() {
             modifier = Modifier.padding(top = 120.dp),
             iconId = R.drawable.ic_about,
             title = "About you",
-            description = "calculate the calories for your goal"
+            description = "calculate the calories for your goal",
+            fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.weight(0.1f))
 

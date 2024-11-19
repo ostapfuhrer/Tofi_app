@@ -41,7 +41,8 @@ fun CustomizeGoalScreenUI() {
             modifier = Modifier.padding(top = 120.dp),
             iconId = R.drawable.ic_customize_goal,
             title = "Customize your goal",
-            description = "this is the last step"
+            description = "this is the last step",
+            fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.weight(0.1f))
 

@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -40,7 +41,8 @@ fun GoalScreenUi() {
             modifier = Modifier.padding(top = 120.dp),
             iconId = R.drawable.ic_goal,
             title = "What your Goal?",
-            description = "We will help you choose calories for your goals"
+            description = "We will help you choose calories for your goals",
+            fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.weight(1f))
 

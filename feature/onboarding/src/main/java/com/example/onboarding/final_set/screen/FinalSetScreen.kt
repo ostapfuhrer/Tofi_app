@@ -60,7 +60,8 @@ fun FinalSetScreenUI() {
             modifier = Modifier.padding(top = 120.dp),
             iconId = R.drawable.ic_done,
             title = "You’re all set!",
-            description = "Your daily nutrition goals"
+            description = "Your daily nutrition goals",
+            fontWeight = FontWeight.Bold
         )
 
         NutritionCard(

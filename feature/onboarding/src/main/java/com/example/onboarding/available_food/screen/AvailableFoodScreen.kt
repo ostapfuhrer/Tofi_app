@@ -45,7 +45,8 @@ fun AvailableFoodScreenUI() {
             modifier = Modifier.padding(top = 120.dp),
             iconId = R.drawable.ic_activity_level,
             title = "Choose the products\navailable to you",
-            description = "a ration will be created based on them"
+            description = "a ration will be created based on them",
+            fontWeight = FontWeight.Bold
         )
 
         SelectorTitle(
