@@ -64,7 +64,7 @@ fun IntroScreenUi() {
             fontWeight = FontWeight.Bold,
             onClick = { /*TODO*/ },
             textColor = Color.White,
-            backgroundColor = Color.Yellow,
+            backgroundColor = Color.LightGray,
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .padding(bottom = 36.dp, start = 8.dp, end = 8.dp)

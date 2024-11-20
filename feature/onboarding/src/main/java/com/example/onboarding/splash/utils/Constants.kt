@@ -1,5 +1,5 @@
 package com.example.onboarding.splash.utils
 
-//import com.example.tofi_app.R
+import com.example.onboarding.R
 
-//internal val errorToastId = R.string.connection_failed
+internal val errorToastId = R.string.connection_failed

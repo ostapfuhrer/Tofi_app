@@ -6,8 +6,8 @@ import com.example.data.firebase.auth.exceptions.ExceptionAuth
 import com.example.database.firebase.auth.exceptions.ExceptionAuthMapper
 import com.example.database.firebase.connection.FirebaseConnection
 import com.example.database.firebase.connection.FirebaseConnectionImpl
-import com.example.data.firebase.database.users.FirebaseUsersDataSource
-import com.example.data.firebase.database.users.FirebaseUsersDataSourceImpl
+import com.example.database.firebase.database.users.FirebaseUsersDataSource
+import com.example.database.firebase.database.users.FirebaseUsersDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
