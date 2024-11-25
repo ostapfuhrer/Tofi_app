@@ -1,6 +1,6 @@
 package com.example.database.firebase.state
 
-import com.example.data.room.entities.UserEntity
+import com.example.database.room.entities.UserEntity
 
 sealed class GetUserState
 

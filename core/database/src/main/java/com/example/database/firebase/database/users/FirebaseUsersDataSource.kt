@@ -1,4 +1,4 @@
-package com.example.data.firebase.database.users
+package com.example.database.firebase.database.users
 
 interface FirebaseUsersDataSource {
 }
