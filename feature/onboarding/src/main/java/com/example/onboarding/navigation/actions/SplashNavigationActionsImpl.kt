@@ -10,8 +10,8 @@ class SplashNavigationActionsImpl @Inject constructor(
 ) : SplashNavigationActions {
     override suspend fun navigateToIntro() {
         appNavigator.navigateTo(
-            route = Destination.IntroScreen.route,
-            popUpToRoute = Destination.SplashScreen.route,
+            route = Destination.Intro.route,
+            popUpToRoute = Destination.Splash.route,
             inclusive = true,
             isSingleTop = true
         )
