@@ -23,7 +23,7 @@ sealed class Destination(val route: String, vararg params: String) {
         }
     }
 
-    object SplashScreen : Destination("splash")
-    object IntroScreen : Destination("intro")
-    object MainScreen : Destination("main")
+    object Splash : Destination("splash")
+    object Intro : Destination("intro")
+    object Main : Destination("main")
 }

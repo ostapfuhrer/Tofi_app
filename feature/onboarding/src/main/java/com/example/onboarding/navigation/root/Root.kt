@@ -7,13 +7,14 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import com.example.onboarding.common.manager.toast.collectToasts
+import com.example.onboarding.intro.navigation.intro
 import com.example.onboarding.navigation.LocalNavController
 import com.example.onboarding.navigation.destination.Destination
 import com.example.onboarding.navigation.getNavController
 import com.example.onboarding.navigation.navigator.NavigationIntent
 import com.example.onboarding.navigation.viewmodel.NavigationViewModel
 import com.example.onboarding.navigation.viewmodel.ToastViewModel
-import com.example.onboarding.splash.navigation.splashScreen
+import com.example.onboarding.splash.navigation.splash
 import kotlinx.coroutines.flow.SharedFlow
 
 @Composable
@@ -31,9 +32,10 @@ fun Root(
 
         NavHost(
             navController = getNavController(),
-            startDestination = Destination.SplashScreen.fullRoute
+            startDestination = Destination.Splash.fullRoute
         ) {
-            splashScreen()
+            splash()
+            intro()
         }
     }
 
