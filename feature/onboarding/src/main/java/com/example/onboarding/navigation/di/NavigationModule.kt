@@ -1,5 +1,7 @@
 package com.example.onboarding.navigation.di
 
+import com.example.onboarding.intro.navigation.IntroNavigationActions
+import com.example.onboarding.navigation.actions.IntroNavigationActionsImpl
 import com.example.onboarding.navigation.actions.SplashNavigationActionsImpl
 import com.example.onboarding.navigation.navigator.AppNavigator
 import com.example.onboarding.navigation.navigator.AppNavigatorImpl
@@ -22,4 +24,10 @@ abstract class NavigationModule {
     abstract fun bindSplashNavigationActions(
         splashNavigationActions: SplashNavigationActionsImpl
     ): SplashNavigationActions
+
+    @Singleton
+    @Binds
+    abstract fun bindIntroNavigationActions(
+        introNavigationActions: IntroNavigationActionsImpl
+    ): IntroNavigationActions
 }

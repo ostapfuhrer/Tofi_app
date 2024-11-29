@@ -24,17 +24,18 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.onboarding.R
 import com.example.onboarding.common.composable.MainButton
+import com.example.onboarding.intro.event.IntroEvent
 import com.example.onboarding.intro.viewmodel.IntroViewModel
 
 @Composable
 fun IntroScreen(
     introViewModel: IntroViewModel = hiltViewModel()
 ) {
-    IntroScreenUi()
+    IntroScreenUi(onEvent = introViewModel::onEvent)
 }
 
 @Composable
-fun IntroScreenUi() {
+fun IntroScreenUi(onEvent: (IntroEvent) -> (Unit) = { }) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -62,7 +63,7 @@ fun IntroScreenUi() {
             text = "Start Now",
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
-            onClick = { /*TODO*/ },
+            onClick = { onEvent(IntroEvent.NavigateToGoal) },
             textColor = Color.White,
             backgroundColor = Color.LightGray,
             modifier = Modifier
@@ -84,7 +85,7 @@ fun IntroScreenUi() {
                 style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold),
                 color = Color.Black,
                 modifier = Modifier
-                    .clickable {}
+                    .clickable { onEvent(IntroEvent.NavigateToLogin) }
                     .padding(start = 4.dp)
 
             )

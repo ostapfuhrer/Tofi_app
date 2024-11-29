@@ -17,12 +17,12 @@ import com.example.onboarding.common.composable.IntroScreenHeader
 import com.example.onboarding.common.composable.MainButton
 
 @Composable
-fun LogInScreen() {
-    LogInScreenUI()
+fun LoginScreen() {
+    LoginScreenUI()
 }
 
 @Composable
-fun LogInScreenUI() {
+fun LoginScreenUI() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -59,6 +59,6 @@ fun LogInScreenUI() {
 
 @Preview
 @Composable
-fun LogInScreenUIPreview() {
-    LogInScreenUI()
+fun LoginScreenUIPreview() {
+    LoginScreenUI()
 }

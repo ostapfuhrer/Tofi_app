@@ -7,7 +7,9 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import com.example.onboarding.common.manager.toast.collectToasts
+import com.example.onboarding.goal.navigation.goal
 import com.example.onboarding.intro.navigation.intro
+import com.example.onboarding.login.navigation.login
 import com.example.onboarding.navigation.LocalNavController
 import com.example.onboarding.navigation.destination.Destination
 import com.example.onboarding.navigation.getNavController
@@ -36,6 +38,8 @@ fun Root(
         ) {
             splash()
             intro()
+            goal()
+            login()
         }
     }
 
