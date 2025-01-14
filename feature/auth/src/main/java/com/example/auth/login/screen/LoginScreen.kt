@@ -12,9 +12,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.onboarding.R
-import com.example.onboarding.common.composable.IntroScreenHeader
-import com.example.onboarding.common.composable.MainButton
+
 
 @Composable
 fun LoginScreen() {
@@ -29,31 +27,31 @@ fun LoginScreenUI() {
             .background(Color.White),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        IntroScreenHeader(
-            modifier = Modifier.padding(top = 240.dp),
-            iconId = R.drawable.ic_join,
-            title = "Join now to start",
-            description = "",
-            fontWeight = FontWeight.Light
-        )
-        MainButton(
-            text = "Continue with Google",
-            fontSize = 16.sp,
-            fontWeight = FontWeight.Normal,
-            textColor = Color.White,
-            backgroundColor = Color.Yellow,
-            onClick = { /*TODO*/ },
-            modifier = Modifier.padding(start = 8.dp, end = 8.dp)
-        )
-        MainButton(
-            text = "Continue with Email",
-            fontSize = 16.sp,
-            fontWeight = FontWeight.Normal,
-            textColor = Color.White,
-            backgroundColor = Color.Gray,
-            onClick = { /*TODO*/ },
-            modifier = Modifier.padding(start = 8.dp, end = 8.dp)
-        )
+     //   IntroScreenHeader(
+     //       modifier = Modifier.padding(top = 240.dp),
+     //       iconId = R.drawable.ic_join,
+     //       title = "Join now to start",
+     //       description = "",
+     //       fontWeight = FontWeight.Light
+     //   )
+     //   MainButton(
+     //       text = "Continue with Google",
+     //       fontSize = 16.sp,
+     //       fontWeight = FontWeight.Normal,
+     //       textColor = Color.White,
+     //       backgroundColor = Color.Yellow,
+     //       onClick = { /*TODO*/ },
+     //       modifier = Modifier.padding(start = 8.dp, end = 8.dp)
+     //   )
+     //   MainButton(
+     //       text = "Continue with Email",
+     //       fontSize = 16.sp,
+     //       fontWeight = FontWeight.Normal,
+     //       textColor = Color.White,
+     //       backgroundColor = Color.Gray,
+     //       onClick = { /*TODO*/ },
+     //       modifier = Modifier.padding(start = 8.dp, end = 8.dp)
+     //   )
     }
 }
 
