@@ -6,14 +6,15 @@ import androidx.room.Entity
 data class UserEntity(
     val id: String,
     val name: String?,
+    val email:String,
     val gender: Gender,
     val age: Int,
-    val weight: Float,
     val height: Float,
+    val weight: Float,
     val activityLevel: ActivityLevel,
     val goal: Goal,
-    val products: List<String>,
-    val goalSpeed: GoalSpeed,
+    val products: String,
+    val weightLossSpeed: WeightLossSpeed,
     val dailyCalories: Int?,
     val dailyProteins: Float?,
     val dailyFats: Float?,
@@ -21,17 +22,17 @@ data class UserEntity(
 )
 
 enum class Gender {
-    Male, Female, Other
+    Male, Female, Other, PreferNotToSay
 }
 
 enum class ActivityLevel {
-    Light, Moderate, Active, VeryActive, ProfessionalAthlete
+    SedentaryLifeStyle, LightActivity, ModeratelyActivity, VeryActive, ProfessionalAthlete
 }
 
 enum class Goal {
-    GainWeight, MaintainWeight, LoseWeight
+    FatLoss, MuscleGain, WeightMaintenance
 }
 
-enum class GoalSpeed {
-    Slow, Moderate, Fast
+enum class WeightLossSpeed {
+    Recommended, Fast, Slow
 }

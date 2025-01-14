@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    kotlin("kapt")
 }
 
 android {
@@ -33,10 +34,17 @@ android {
 }
 
 dependencies {
+    //DataStore
     api(libs.androidx.datastore.preferences)
+    api(libs.androidx.datastore)
+
     api(project(":core:model"))
 
     implementation(project(":core:common"))
+
+    //Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

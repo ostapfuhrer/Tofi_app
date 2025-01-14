@@ -37,4 +37,10 @@
     <string name="new_password">Enter new password</string>
     <string name="confirm_password">Confirm new password</string>
     <string name="update_btn">Update</string>
+
+    <!--Common UI-->
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_other">Other</string>
+    <string name="prefer_not_to_say">Prefer not to say</string>
 </resources>

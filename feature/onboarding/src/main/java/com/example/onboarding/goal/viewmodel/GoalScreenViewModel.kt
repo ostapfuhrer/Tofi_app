@@ -6,7 +6,6 @@ import javax.inject.Inject
 
 @HiltViewModel
 class GoalScreenViewModel @Inject constructor(
-
 ) : ViewModel() {
 
 }

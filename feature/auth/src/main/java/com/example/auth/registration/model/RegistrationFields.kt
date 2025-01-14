@@ -1,4 +1,4 @@
-package com.example.onboarding.login.model
+package com.example.auth.registration.model
 
 data class RegistrationFields(
     val name: String,

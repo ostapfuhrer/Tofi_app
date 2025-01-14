@@ -62,6 +62,7 @@ dependencies {
 
     //dependencies feature
     implementation(project(":feature:onboarding"))
+    implementation(project(":feature:auth"))
 
     // Jetpack Compose integration
     implementation(libs.androidx.navigation.compose)

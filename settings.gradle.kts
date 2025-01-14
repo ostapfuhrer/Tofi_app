@@ -39,3 +39,4 @@ include(":core:notifications")
 include(":feature:onboarding")
 
 
+include(":feature:auth")

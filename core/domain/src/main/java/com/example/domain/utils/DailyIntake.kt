@@ -1,9 +1,10 @@
 package com.example.domain.utils
 
+import com.example.database.R
 import com.example.database.room.entities.ActivityLevel
 import com.example.database.room.entities.Gender
 import com.example.database.room.entities.Goal
-import com.example.database.room.entities.GoalSpeed
+import com.example.database.room.entities.WeightLossSpeed
 
 data class DailyIntake(
     val calories: Int,
@@ -19,33 +20,34 @@ fun calculateDailyIntake(
     gender: Gender,
     activityLevel: ActivityLevel,
     goal: Goal,
-    goalSpeed: GoalSpeed
+    weightLossSpeed: WeightLossSpeed,
 ): DailyIntake {
     //base metabolism
     val bm = when (gender) {
         Gender.Male -> 10 * weight + 6.25 * height - 5 * age + 5
         Gender.Female -> 10 * weight + 6.25 * height - 5 * age - 161
         Gender.Other -> 10 * weight + 6.25 * height - 5 * age
+        Gender.PreferNotToSay -> 10 * weight + 6.25 * height - 5 * age
     }
 
     val activityMultiplier = when (activityLevel) {
-        ActivityLevel.Light -> 1.2
-        ActivityLevel.Moderate -> 1.375
-        ActivityLevel.Active -> 1.55
+        ActivityLevel.LightActivity -> 1.2
+        ActivityLevel.ModeratelyActivity -> 1.375
+        ActivityLevel.SedentaryLifeStyle -> 1.55
         ActivityLevel.VeryActive -> 1.725
         ActivityLevel.ProfessionalAthlete -> 1.9
     }
 
-    val goalModifier = when (goalSpeed) {
-        GoalSpeed.Slow -> 0.1
-        GoalSpeed.Moderate -> 0.2
-        GoalSpeed.Fast -> 0.3
+    val goalModifier = when (weightLossSpeed) {
+        WeightLossSpeed.Slow -> 0.1
+        WeightLossSpeed.Recommended -> 0.2
+        WeightLossSpeed.Fast -> 0.3
     }
 
     val dailyCalories = when (goal) {
-        Goal.GainWeight -> (bm * activityMultiplier * (1 + goalModifier)).toInt()
-        Goal.MaintainWeight -> (bm * activityMultiplier).toInt()
-        Goal.LoseWeight -> (bm * activityMultiplier * (1 - goalModifier)).toInt()
+        Goal.MuscleGain -> (bm * activityMultiplier * (1 + goalModifier)).toInt()
+        Goal.WeightMaintenance -> (bm * activityMultiplier).toInt()
+        Goal.FatLoss -> (bm * activityMultiplier * (1 - goalModifier)).toInt()
     }
 
     // proteins (30%), fats (25%), carbohidrates (45%)
@@ -55,3 +57,13 @@ fun calculateDailyIntake(
 
     return DailyIntake(dailyCalories, proteins, fats, carbs)
 }
+
+fun Gender.getResId(): Int {
+    return when (this) {
+        Gender.Male -> R.string.gender_male
+        Gender.Female -> R.string.gender_female
+        Gender.Other -> R.string.gender_other
+        Gender.PreferNotToSay -> R.string.prefer_not_to_say
+    }
+}
+

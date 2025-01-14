@@ -1,4 +1,4 @@
-package com.example.onboarding.login.navigation
+package com.example.auth.login.navigation
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable

@@ -1,4 +1,4 @@
-package com.example.onboarding.login.screens
+package com.example.auth.registration.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -27,7 +27,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.onboarding.R
+import com.example.auth.R
 
 @Composable
 fun InputRegisterScreen(
