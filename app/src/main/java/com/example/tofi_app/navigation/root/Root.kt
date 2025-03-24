@@ -1,4 +1,4 @@
-package com.example.onboarding.navigation.root
+package com.example.tofi_app.navigation.root
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -9,14 +9,13 @@ import androidx.navigation.compose.NavHost
 import com.example.onboarding.common.manager.toast.collectToasts
 import com.example.onboarding.goal.navigation.goal
 import com.example.onboarding.intro.navigation.intro
-import com.example.onboarding.login.navigation.login
-import com.example.onboarding.navigation.LocalNavController
-import com.example.onboarding.navigation.destination.Destination
-import com.example.onboarding.navigation.getNavController
-import com.example.onboarding.navigation.navigator.NavigationIntent
-import com.example.onboarding.navigation.viewmodel.NavigationViewModel
-import com.example.onboarding.navigation.viewmodel.ToastViewModel
+import com.example.onboarding.navigation.destination.OnboardingDestination
 import com.example.onboarding.splash.navigation.splash
+import com.example.tofi_app.navigation.LocalNavController
+import com.example.tofi_app.navigation.getNavController
+import com.example.tofi_app.navigation.navigator.NavigationIntent
+import com.example.tofi_app.navigation.viewmodel.NavigationViewModel
+import com.example.tofi_app.navigation.viewmodel.ToastViewModel
 import kotlinx.coroutines.flow.SharedFlow
 
 @Composable
@@ -34,12 +33,12 @@ fun Root(
 
         NavHost(
             navController = getNavController(),
-            startDestination = Destination.Splash.fullRoute
+            startDestination = OnboardingDestination.Splash.fullRoute
         ) {
             splash()
             intro()
             goal()
-            login()
+            // login()
         }
     }
 

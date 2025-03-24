@@ -1,4 +1,4 @@
-package com.example.onboarding.navigation
+package com.example.tofi_app.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.compositionLocalOf

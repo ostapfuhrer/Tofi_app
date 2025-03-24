@@ -29,99 +29,99 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.auth.R
 
-@Composable
-fun InputRegisterScreen(
-    iconId: Int,
-    title: String,
-    placeholder: String,
-    inputType: KeyboardType,
-    onInputChange: (String) -> Unit
-) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.White),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Icon(
-            painter = painterResource(id = iconId),
-            contentDescription = null,
-            modifier = Modifier.size(40.dp),
-        )
-
-        Text(
-            text = title,
-            style = TextStyle(
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Light
-            )
-        )
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        TextField(
-            value = "",
-            onValueChange = onInputChange,
-            placeholder = {
-                Text(text = placeholder)
-            },
-            keyboardOptions = KeyboardOptions(keyboardType = inputType),
-            shape = RoundedCornerShape(8.dp),
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 8.dp, end = 8.dp)
-                .background(Color.LightGray, shape = RoundedCornerShape(8.dp))
-                .border(
-                    width = 1.dp,
-                    color = Color.Black,
-                    shape = RoundedCornerShape(8.dp)
-                ),
-            colors = TextFieldDefaults.colors(
-                focusedContainerColor = Color.LightGray,
-                unfocusedContainerColor = Color.LightGray,
-                focusedIndicatorColor = Color.Transparent,
-                unfocusedIndicatorColor = Color.Transparent,
-            )
-        )
-    }
-}
-
-@Composable
-fun NameInputScreen(onNameChange: (String) -> Unit) {
-    InputRegisterScreen(
-        iconId = R.drawable.ic_default_user,
-        title = "What's your name?",
-        placeholder = "Enter your name",
-        inputType = KeyboardType.Text,
-        onInputChange = onNameChange
-    )
-}
-
-@Composable
-fun EmailInputScreen(onEmailChange: (String) -> Unit) {
-    InputRegisterScreen(
-        iconId = R.drawable.ic_default_email,
-        title = "What's your email?",
-        placeholder = "Enter your email",
-        inputType = KeyboardType.Email,
-        onInputChange = onEmailChange
-    )
-}
-
-@Composable
-fun PasswordInputScreen(onPasswordChange: (String) -> Unit) {
-    InputRegisterScreen(
-        iconId = R.drawable.ic_default_password,
-        title = "Create password",
-        placeholder = "Enter your password",
-        inputType = KeyboardType.Password,
-        onInputChange = onPasswordChange
-    )
-}
-
-@Preview()
-@Composable
-fun InputRegisterScreenUIPreview() {
-    PasswordInputScreen(onPasswordChange = {})
-}
+//@Composable
+//fun InputRegisterScreen(
+//    iconId: Int,
+//    title: String,
+//    placeholder: String,
+//    inputType: KeyboardType,
+//    onInputChange: (String) -> Unit
+//) {
+//    Column(
+//        modifier = Modifier
+//            .fillMaxSize()
+//            .background(Color.White),
+//        horizontalAlignment = Alignment.CenterHorizontally,
+//        verticalArrangement = Arrangement.Center
+//    ) {
+//        Icon(
+//            painter = painterResource(id = iconId),
+//            contentDescription = null,
+//            modifier = Modifier.size(40.dp),
+//        )
+//
+//        Text(
+//            text = title,
+//            style = TextStyle(
+//                fontSize = 24.sp,
+//                fontWeight = FontWeight.Light
+//            )
+//        )
+//
+//        Spacer(modifier = Modifier.height(8.dp))
+//
+//        TextField(
+//            value = "",
+//            onValueChange = onInputChange,
+//            placeholder = {
+//                Text(text = placeholder)
+//            },
+//            keyboardOptions = KeyboardOptions(keyboardType = inputType),
+//            shape = RoundedCornerShape(8.dp),
+//            modifier = Modifier
+//                .fillMaxWidth()
+//                .padding(start = 8.dp, end = 8.dp)
+//                .background(Color.LightGray, shape = RoundedCornerShape(8.dp))
+//                .border(
+//                    width = 1.dp,
+//                    color = Color.Black,
+//                    shape = RoundedCornerShape(8.dp)
+//                ),
+//            colors = TextFieldDefaults.colors(
+//                focusedContainerColor = Color.LightGray,
+//                unfocusedContainerColor = Color.LightGray,
+//                focusedIndicatorColor = Color.Transparent,
+//                unfocusedIndicatorColor = Color.Transparent,
+//            )
+//        )
+//    }
+//}
+//
+//@Composable
+//fun NameInputScreen(onNameChange: (String) -> Unit) {
+//    InputRegisterScreen(
+//        iconId = R.drawable.ic_default_user,
+//        title = "What's your name?",
+//        placeholder = "Enter your name",
+//        inputType = KeyboardType.Text,
+//        onInputChange = onNameChange
+//    )
+//}
+//
+//@Composable
+//fun EmailInputScreen(onEmailChange: (String) -> Unit) {
+//    InputRegisterScreen(
+//        iconId = R.drawable.ic_default_email,
+//        title = "What's your email?",
+//        placeholder = "Enter your email",
+//        inputType = KeyboardType.Email,
+//        onInputChange = onEmailChange
+//    )
+//}
+//
+//@Composable
+//fun PasswordInputScreen(onPasswordChange: (String) -> Unit) {
+//    InputRegisterScreen(
+//        iconId = R.drawable.ic_default_password,
+//        title = "Create password",
+//        placeholder = "Enter your password",
+//        inputType = KeyboardType.Password,
+//        onInputChange = onPasswordChange
+//    )
+//}
+//
+//@Preview()
+//@Composable
+//fun InputRegisterScreenUIPreview() {
+//    PasswordInputScreen(onPasswordChange = {})
+//}

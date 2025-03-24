@@ -21,12 +21,12 @@ fun LoginScreen() {
 
 @Composable
 fun LoginScreenUI() {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.White),
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
+  //  Column(
+  //      modifier = Modifier
+  //          .fillMaxSize()
+  //          .background(Color.White),
+  //      horizontalAlignment = Alignment.CenterHorizontally,
+  //  ) {
      //   IntroScreenHeader(
      //       modifier = Modifier.padding(top = 240.dp),
      //       iconId = R.drawable.ic_join,
@@ -53,10 +53,10 @@ fun LoginScreenUI() {
      //       modifier = Modifier.padding(start = 8.dp, end = 8.dp)
      //   )
     }
-}
+//}
 
-@Preview
-@Composable
-fun LoginScreenUIPreview() {
-    LoginScreenUI()
-}
+//@Preview
+//@Composable
+//fun LoginScreenUIPreview() {
+//    LoginScreenUI()
+//}

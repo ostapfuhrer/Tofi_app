@@ -1,4 +1,4 @@
-package com.example.onboarding.navigation.viewmodel
+package com.example.tofi_app.navigation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.example.onboarding.common.manager.toast.ToastManager

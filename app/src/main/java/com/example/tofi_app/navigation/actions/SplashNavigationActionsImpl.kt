@@ -1,8 +1,8 @@
-package com.example.onboarding.navigation.actions
+package com.example.tofi_app.navigation.actions
 
-import com.example.onboarding.navigation.destination.Destination
-import com.example.onboarding.navigation.navigator.AppNavigator
+import com.example.onboarding.navigation.destination.OnboardingDestination
 import com.example.onboarding.splash.navigation.SplashNavigationActions
+import com.example.tofi_app.navigation.navigator.AppNavigator
 import javax.inject.Inject
 
 class SplashNavigationActionsImpl @Inject constructor(
@@ -10,8 +10,8 @@ class SplashNavigationActionsImpl @Inject constructor(
 ) : SplashNavigationActions {
     override suspend fun navigateToIntro() {
         appNavigator.navigateTo(
-            route = Destination.Intro.route,
-            popUpToRoute = Destination.Splash.route,
+            route = OnboardingDestination.Intro.route,
+            popUpToRoute = OnboardingDestination.Splash.route,
             inclusive = true,
             isSingleTop = true
         )

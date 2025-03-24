@@ -8,7 +8,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
-import com.example.onboarding.navigation.root.Root
+import com.example.tofi_app.navigation.root.Root
 import com.example.tofi_app.ui.theme.Tofi_appTheme
 import dagger.hilt.android.AndroidEntryPoint
 

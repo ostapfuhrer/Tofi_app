@@ -1,4 +1,4 @@
-package com.example.onboarding.navigation.navigator
+package com.example.tofi_app.navigation.navigator
 
 import kotlinx.coroutines.flow.MutableSharedFlow
 import javax.inject.Inject
